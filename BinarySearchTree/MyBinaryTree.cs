@@ -23,6 +23,7 @@ namespace BinarySearchTree
             this.rightTree = null;
         }
         /// <summary>
+        /// UC 1
         /// Insert data in binary tree
         /// </summary>
         /// <param name="item"></param>

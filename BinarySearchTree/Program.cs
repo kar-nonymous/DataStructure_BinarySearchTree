@@ -21,6 +21,7 @@ namespace BinarySearchTree
             myBinaryTree.Insert(63);
             myBinaryTree.Insert(67);
             myBinaryTree.Display();
+            myBinaryTree.Search(40);
         }
     }
 }

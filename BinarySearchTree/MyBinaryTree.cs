@@ -9,8 +9,8 @@ namespace BinarySearchTree
         public T nodeData { get; set; }
         public MyBinaryTree<T> leftTree { get; set; }
         public MyBinaryTree<T> rightTree { get; set; }
-        int leftCount = 0;
-        int rightCount = 0;
+        int leftCount;
+        int rightCount;
         bool result = false;
         /// <summary>
         /// Constructor to define node values
@@ -31,7 +31,8 @@ namespace BinarySearchTree
         {
             T currentNodeValue = this.nodeData;
             int value = currentNodeValue.CompareTo(item);
-            if((currentNodeValue.CompareTo(item))>0)
+            ///if entered new node data is less than parent data then it will be added to left
+            if ((currentNodeValue.CompareTo(item))>0)
             {
                 if (this.leftTree == null)
                 {
@@ -43,7 +44,8 @@ namespace BinarySearchTree
             }
             else
             {
-                if(this.rightTree==null)
+                ///if entered new node data is more than parent data then it will be added to right
+                if (this.rightTree==null)
                 {
                     this.rightTree = new MyBinaryTree<T>(item);
                     Console.WriteLine("Inserting " + item);
